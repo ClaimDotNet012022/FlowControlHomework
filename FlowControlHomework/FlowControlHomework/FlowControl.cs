@@ -204,9 +204,9 @@ namespace FlowControlHomework
             }
 
             int inRange = 6; // Set this value to pass BOTH the range checks, do not reassign it.
-            if (inRange < 10 && inRange > 5)
+            if (inRange > 5 && inRange < 10)
             {
-                if (inRange < 7 && inRange > 5)
+                if (inRange > 5 && inRange < 7)
                 {
                     Console.Write(true);
                     Assert.IsTrue(true);
@@ -346,7 +346,8 @@ namespace FlowControlHomework
             for (int i = 0; i <= max; i++)
             {
                 Console.WriteLine(true);
-                // DONT BE ALARMED, you dont need brackets if its only a single statement you want to execute. Im just exposing you to this because programmers do it
+                // DONT BE ALARMED, you dont need brackets if its only a single statement you want to execute. Im just exposing you to this because programmers do it.
+                // But don't do it yourself. It's not a good practice, especially for a beginner.
                 if (i == 15) Assert.IsTrue(true);
             }
 
@@ -358,7 +359,7 @@ namespace FlowControlHomework
             // This one is tough, take your time.
             for (int i = 0; i <= max2; i++)
             {
-                bool isOdd = !((i % 2) == 0); // notice how the variable explains the expression? 
+                bool isOdd = !((i % 2) == 0); // notice how the variable name explains the expression? 
                 if (isOdd)
                 {
                     // if you reach here test will fail. 
@@ -371,7 +372,7 @@ namespace FlowControlHomework
 
             // break out of the loop after the test passes at least once, there are a couple ways do to this
             int counter = 10;  // Change me to get in.
-            while (counter < 15 && counter > 1)
+            while (counter > 1 && counter < 15)
             {
                 Console.WriteLine(true);
                 Assert.IsTrue(true);

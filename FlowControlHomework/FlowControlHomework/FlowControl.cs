@@ -19,22 +19,22 @@ namespace FlowControlHomework
                 Assert.IsTrue(false);
             }
 
-            bool changeFlow2 = false; // assign me so I can reach line 24 in my flow of execution
+            bool changeFlow2 = true; // assign me so I can reach line 24 in my flow of execution
             if (changeFlow2)
             {
-                Assert.IsTrue(false);
+                Assert.IsTrue(true);
             }
             else
             {
                 Assert.IsTrue(true);
             }
 
-            bool changeFlow3 = false; // assign me so I can reach line 38 in my flow of execution
+            bool changeFlow3 = true; // assign me so I can reach line 38 in my flow of execution
             if (changeFlow3)
             {
                 //  Change the flow with the same variable;
 
-                if (changeFlow3 == false)
+                if (changeFlow3 == true)
                 {
                     Assert.IsTrue(true);
                 }
@@ -203,7 +203,7 @@ namespace FlowControlHomework
                 Assert.IsTrue(false);
             }
 
-            int inRange = 6; // Set this value to pass BOTH the range checks, do not reassign it.
+            int inRange = 8; // Set this value to pass BOTH the range checks, do not reassign it.
             if (inRange > 5 && inRange < 10)
             {
                 if (inRange > 5 && inRange < 7)
@@ -296,7 +296,7 @@ namespace FlowControlHomework
                     Assert.IsTrue(false);
                     break;
                 case "c":
-                    Assert.IsTrue(true);
+                    Assert.IsTrue(false/**/);
                     break;
                 default:
                     Assert.IsTrue(false);
@@ -328,7 +328,7 @@ namespace FlowControlHomework
                 Assert.IsTrue(false);
                 break;
             case "c":
-                Assert.IsTrue(true);
+                Assert.IsTrue(false/**/);
                 break;
             default:
                 Assert.IsTrue(false);
@@ -357,7 +357,7 @@ namespace FlowControlHomework
             // Dont change anything in the block, only the for statement.
             // hint: you dont need increment by 1.
             // This one is tough, take your time.
-            for (int i = 0; i <= max2; i++)
+            for (int i = 16; i <= max2; i++)
             {
                 bool isOdd = !((i % 2) == 0); // notice how the variable name explains the expression? 
                 if (isOdd)
@@ -371,8 +371,8 @@ namespace FlowControlHomework
             }
 
             // break out of the loop after the test passes at least once, there are a couple ways do to this
-            int counter = 10;  // Change me to get in.
-            while (counter > 1 && counter < 15)
+            int counter = 9;  // Change me to get in.
+            while (++counter > 1 && counter < 15)
             {
                 Console.WriteLine(true);
                 Assert.IsTrue(true);
@@ -383,7 +383,7 @@ namespace FlowControlHomework
                 }
             }
 
-            int count = 2;
+            int count = 9;
             do
             {
                 if (count > 0)

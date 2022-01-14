@@ -357,7 +357,7 @@ namespace FlowControlHomework
             // Dont change anything in the block, only the for statement.
             // hint: you dont need increment by 1.
             // This one is tough, take your time.
-            for (int i = 16; i < max2; i++)
+            for (int i = 0; i < max2; i+=2)
             {
                 bool isOdd = !((i % 2) == 0); // notice how the variable name explains the expression? 
                 if (isOdd)

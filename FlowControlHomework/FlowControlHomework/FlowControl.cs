@@ -351,13 +351,13 @@ namespace FlowControlHomework
                 if (i == 15) Assert.IsTrue(true);
             }
 
-           int max2 = 16;
+           int max2 = 17;
             // Almost the same as above but you need to do something special to get to 16.
             // Some restrictions:
             // Dont change anything in the block, only the for statement.
             // hint: you dont need increment by 1.
             // This one is tough, take your time.
-            for (int i = 16; i <= max2; i++)
+            for (int i = 16; i < max2; i++)
             {
                 bool isOdd = !((i % 2) == 0); // notice how the variable name explains the expression? 
                 if (isOdd)

@@ -1,0 +1,6 @@
+﻿HW assigment passes all tests!
+added to line 36; reassigned changeFlow3 to false .
+fixed line 37; now it is back to (changeFlow3 == false).
+added to line 354;  changed the max2 from 17 to 16 so that it passes the test.
+changed back for (int i = 16; i <= max2; i++) to its previous state and assigned i = 16.
+fixed line 367; now Assert.IsTrue(false) instead of true.

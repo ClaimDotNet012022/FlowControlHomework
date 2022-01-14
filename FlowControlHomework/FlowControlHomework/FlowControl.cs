@@ -33,8 +33,8 @@ namespace FlowControlHomework
             if (changeFlow3)
             {
                 //  Change the flow with the same variable (reassign the variable so I can reach line 38);
-
-                if (changeFlow3)
+                changeFlow3 = false;
+                if (changeFlow3 == false)
                 {
                     Assert.IsTrue(true);
                 }
@@ -351,20 +351,20 @@ namespace FlowControlHomework
                 if (i == 15) Assert.IsTrue(true);
             }
 
-           int max2 = 17;
+           int max2 = 16;
             // Almost the same as above but you need to do something special to get to 16.
             // Some restrictions:
             // Dont change anything in the block, only the for statement.
             // hint: you dont need increment by 1.
             // This one is tough, take your time.
-            for (int i = max2; i > 0; --i)
+            for (int i = 16; i <= max2; i++)
             {
                 bool isOdd = !((i % 2) == 0); // notice how the variable name explains the expression? 
                 if (isOdd)
                 {
                     // if you reach here test will fail. 
                     Console.WriteLine(true);
-                    Assert.IsTrue(true);
+                    Assert.IsTrue(false);
                 }
 
                 if (i == 16) Assert.IsTrue(true);

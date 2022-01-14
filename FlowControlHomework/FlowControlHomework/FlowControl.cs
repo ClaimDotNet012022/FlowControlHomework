@@ -15,33 +15,34 @@ namespace FlowControlHomework
                 Assert.IsTrue(true);
             }
             else
-            {
-                Assert.IsTrue(false);
+            {   
+                Assert.IsTrue(false);  
             }
 
-            bool changeFlow2 = false; // assign me so I can reach line 24 in my flow of execution
+            bool changeFlow2 = true; // assign me so I can reach line 24 in my flow of execution
             if (changeFlow2)
             {
-                Assert.IsTrue(false);
+                
+                Assert.IsTrue(true); 
             }
             else
             {
-                Assert.IsTrue(true);
+                Assert.IsTrue(false);
             }
 
-            bool changeFlow3 = false; // assign me so I can reach line 38 in my flow of execution
+            bool changeFlow3 = true; // assign me so I can reach line 38 in my flow of execution
             if (changeFlow3)
             {
                 //  Change the flow with the same variable;
-
-                if (changeFlow3 == false)
-                {
+                
+                if (changeFlow3)
+                {  
                     Assert.IsTrue(true);
                 }
             }
             else
-            {
-                Assert.IsTrue(false);
+            {   
+                Assert.IsTrue(false); 
             }
 
             bool changeFlow4 = false; // assign me so I can reach line 54 in my flow of execution
@@ -51,14 +52,14 @@ namespace FlowControlHomework
                 Assert.IsTrue(false);
             }
             else if (nextChangeFlow)
-            {
+            {   // need to reach here an execute this (line 54)
                 Assert.IsTrue(true);
             }
             else
             {
                 Assert.IsTrue(false);
             }
-
+            
             bool changeFlow5 = false; // assign me so I can reach line 73 in my flow of execution
             bool nextChangeFlow2 = false; // assign me so I can reach line 73 in my flow of execution
             if (changeFlow5)
@@ -70,15 +71,15 @@ namespace FlowControlHomework
                 Assert.IsTrue(false);
             }
             else
-            {
+            {   
                 Assert.IsTrue(true);
             }
 
             // Uncomment and fix me so I compile.
-            //if true
-            //{
-            //    
-            //}
+            if (true)
+            {
+                Assert.IsTrue(true);
+            }
 
         }
 
@@ -87,13 +88,13 @@ namespace FlowControlHomework
         public void IfWithOperators()
         {
             //This section is testing that you know what these operators do, provide operands to reach the pass statements.
-            //     you can do this in may ways as long as you prove operands in the appropriate place.
+            //you can do this in many ways as long as you prove operands in the appropriate place.
             int myNum = 3;
             int yourNum = 3;
             int sumNum = 6;
             bool withOp = false;
             bool withOp2 = true;
-                if (myNum == yourNum)
+            if (myNum == yourNum)
             {
                 Console.WriteLine(true);
                 Assert.IsTrue(true);
@@ -322,23 +323,23 @@ namespace FlowControlHomework
             switch (usersChoice) // Fix me so I compile
             { 
                 case "a":
-                Assert.IsTrue(true);
-                break;
-            case "b":
-                Assert.IsTrue(false);
-                break;
-            case "c":
-                Assert.IsTrue(true);
-                break;
-            default:
-                Assert.IsTrue(false);
-                break;
+                    Assert.IsTrue(true);
+                    break;
+                case "b":
+                    Assert.IsTrue(false);
+                    break;
+                case "c":
+                    Assert.IsTrue(true);
+                    break;
+                default:
+                    Assert.IsTrue(false);
+                    break;
             }
 
         }
 
 
-        [TestMethod]
+        [TestMethod]   // ********falta esta parte
         public void Loops()
         {
 
@@ -349,15 +350,16 @@ namespace FlowControlHomework
                 // DONT BE ALARMED, you dont need brackets if its only a single statement you want to execute. Im just exposing you to this because programmers do it.
                 // But don't do it yourself. It's not a good practice, especially for a beginner.
                 if (i == 15) Assert.IsTrue(true);
+                
             }
 
-           int max2 = 17;
+            int max2 = 17;
             // Almost the same as above but you need to do something special to get to 16.
-            // Some restrictions:
+            //Some restrictions:
             // Dont change anything in the block, only the for statement.
             // hint: you dont need increment by 1.
             // This one is tough, take your time.
-            for (int i = 0; i <= max2; i++)
+            for (int i = max2; i > 0; --i)
             {
                 bool isOdd = !((i % 2) == 0); // notice how the variable name explains the expression? 
                 if (isOdd)
@@ -371,9 +373,10 @@ namespace FlowControlHomework
             }
 
             // break out of the loop after the test passes at least once, there are a couple ways do to this
-            int counter = 10;  // Change me to get in.
+            int counter = 8;  // Change me to get in.
             while (counter > 1 && counter < 15)
             {
+                counter++;
                 Console.WriteLine(true);
                 Assert.IsTrue(true);
                 Console.WriteLine("IM STUCK IN HERE");
@@ -392,7 +395,7 @@ namespace FlowControlHomework
                     Assert.IsTrue(true);
                 }
                 count++;
-            } while ( count < 10);
+            } while (count < 10);
             
         }
     }

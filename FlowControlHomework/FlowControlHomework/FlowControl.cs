@@ -29,12 +29,12 @@ namespace FlowControlHomework
                 Assert.IsTrue(true);
             }
 
-            bool changeFlow3 = false; // assign me so I can reach line 38 in my flow of execution
+            bool changeFlow3 = true; // assign me so I can reach line 38 in my flow of execution
             if (changeFlow3)
             {
                 //  Change the flow with the same variable (reassign the variable so I can reach line 38);
 
-                if (changeFlow3 == false)
+                if (changeFlow3)
                 {
                     Assert.IsTrue(true);
                 }
@@ -75,10 +75,10 @@ namespace FlowControlHomework
             }
 
             // Uncomment and fix me so I compile.
-            //if true
-            //{
-            //    
-            //}
+            if (true)
+            {
+                Assert.IsTrue(true);
+            }
 
         }
 
@@ -203,7 +203,7 @@ namespace FlowControlHomework
                 Assert.IsTrue(false);
             }
 
-            int inRange = 27; // Set this value to pass BOTH the range checks, do not reassign it.
+            int inRange = 6; // Set this value to pass BOTH the range checks, do not reassign it.
             if (inRange > 5 && inRange < 10)
             {
                 if (inRange > 5 && inRange < 7)
@@ -223,7 +223,7 @@ namespace FlowControlHomework
         [TestMethod]
         public void Switch()
         {
-            int number = 16; //Assign me so I cause the next switch to pass.
+            int number = 26; //Assign me so I cause the next switch to pass.
             switch (number)
             {
                 case 15:
@@ -240,7 +240,7 @@ namespace FlowControlHomework
                     break;
             }
 
-            number = 26; //Assign me so I cause the next switch to pass.
+            number = 17; //Assign me so I cause the next switch to pass.
             switch (number)
             {
                 case 15:
@@ -257,7 +257,7 @@ namespace FlowControlHomework
                     break;
             }
 
-            number = 1;  //Assign me so I cause the next switch to pass.
+            number = 7;  //Assign me so I cause the next switch to pass.
             switch (number)
             {
                 case 1:
@@ -271,7 +271,7 @@ namespace FlowControlHomework
                     break;
                 case 4:
                     Console.WriteLine(4);
-                        break;
+                    break;
                 case 5:
                     Console.WriteLine(5);
                     break;
@@ -289,16 +289,16 @@ namespace FlowControlHomework
             string usersChoice = "a";
             switch (usersChoice) // Fix me so I compile
             {
-                case "a" ;
+                case "a":
                     Assert.IsTrue(true);
                     break;
-                case "b" ;
+                case "b":
                     Assert.IsTrue(false);
                     break;
-                case "c" ;
+                case "c":
                     Assert.IsTrue(true);
                     break;
-                    default;
+                default:
                     Assert.IsTrue(false);
                     break;
             }
@@ -307,23 +307,27 @@ namespace FlowControlHomework
             {
                 case "a":
                     Assert.IsTrue(true);
+                    break;
                 case "b":
                     Assert.IsTrue(false);
+                    break;
                 case "c":
                     Assert.IsTrue(false);
+                    break;
                 default:
                     Assert.IsTrue(false);
+                    break;
             }
 
             switch (usersChoice) // Fix me so I compile
             { 
-                "a":
+                case "a":
                     Assert.IsTrue(true);
                     break;
-                "b":
+                case "b":
                     Assert.IsTrue(false);
                     break;
-                "c":
+                case "c":
                     Assert.IsTrue(true);
                     break;
                 default:
@@ -338,7 +342,7 @@ namespace FlowControlHomework
         public void Loops()
         {
 
-            int max = 12; // set me correctly so i reach the assert pass.
+            int max = 15; // set me correctly so i reach the assert pass.
             for (int i = 0; i <= max; i++)
             {
                 Console.WriteLine(true);
@@ -353,7 +357,7 @@ namespace FlowControlHomework
             // Dont change anything in the block, only the for statement.
             // hint: you dont need increment by 1.
             // This one is tough, take your time.
-            for (int i = 0; i <= max2; i++)
+            for (int i = max2; i > 0; --i)
             {
                 bool isOdd = !((i % 2) == 0); // notice how the variable name explains the expression? 
                 if (isOdd)
@@ -367,9 +371,10 @@ namespace FlowControlHomework
             }
 
             // break out of the loop after the test passes at least once, there are a couple ways do to this
-            int counter = 0;  // Change me to get in.
+            int counter = 8;  // Change me to get in.
             while (counter > 1 && counter < 15)
             {
+                counter++;
                 Console.WriteLine(true);
                 Assert.IsTrue(true);
                 Console.WriteLine("IM STUCK IN HERE");
@@ -380,7 +385,7 @@ namespace FlowControlHomework
             }
 
             // Fix this loop so the assert true line passes at least once AND the test doesn't go on forever.
-            int count = 0;
+            int count = 2;
             do
             {
                 if (count > 0)
@@ -388,7 +393,7 @@ namespace FlowControlHomework
                     Console.WriteLine(true);
                     Assert.IsTrue(true);
                 }
-                
+                count++;
             } while ( count < 10);
             
         }

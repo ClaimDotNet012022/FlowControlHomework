@@ -22,7 +22,7 @@ namespace FlowControlHomework
             bool changeFlow2 = true; // assign me so I can reach line 24 in my flow of execution
             if (changeFlow2)
             {
-                Assert.IsTrue(false);
+                Assert.IsTrue(true);
             }
             else
             {

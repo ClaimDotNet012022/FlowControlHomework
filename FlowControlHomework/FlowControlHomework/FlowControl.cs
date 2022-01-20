@@ -373,13 +373,13 @@ namespace FlowControlHomework
             int counter = 2;  // Change me to get in.
             while (counter > 1 && counter < 15)
             {
-                Console.WriteLine(true);
                 Assert.IsTrue(true);
                 Console.WriteLine("IM STUCK IN HERE");
                 if (counter == 10)
                 {
                     break;
                 }
+                counter++;
             }
 
             // Fix this loop so the assert true line passes at least once AND the test doesn't go on forever.
@@ -388,11 +388,14 @@ namespace FlowControlHomework
             {
                 if (count > 0)
                 {
+
                     Console.WriteLine(true);
                     Assert.IsTrue(true);
+                    
                 }
-
+                count++;
             } while (count < 10);
+
 
         }
     }

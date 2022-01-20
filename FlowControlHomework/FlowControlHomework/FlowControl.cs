@@ -379,7 +379,7 @@ namespace FlowControlHomework
                 {
                     break;
                 }
-                count++;
+                counter++;
             }
 
             // Fix this loop so the assert true line passes at least once AND the test doesn't go on forever.

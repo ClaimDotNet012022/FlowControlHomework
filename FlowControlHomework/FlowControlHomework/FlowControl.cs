@@ -247,7 +247,7 @@ namespace FlowControlHomework
                     break;
             }
 
-            number = 26; //Assign me so I cause the next switch to pass.
+            number = 287; //Assign me so I cause the next switch to pass.
             switch (number)
             {
                 case 15:
@@ -310,15 +310,17 @@ namespace FlowControlHomework
                     break;
             }
 
-            switch (usersChoice) = "a" ;// Fix me so I compile
+
+            usersChoice = "a";
+            switch (usersChoice) // Fix me so I compile
             {
                 case "a":
                     Assert.IsTrue(true);
                     break;
-                case "b";
+                case "b":
                     Assert.IsTrue(false);
                     break;
-                case "c";
+                case "c":
                     Assert.IsTrue(false);
                     break;
                 default:
@@ -326,9 +328,11 @@ namespace FlowControlHomework
                     break;
             }
 
-            switch (usersChoice) = "c" ; // Fix me so I compile
+
+            usersChoice = "c";
+            switch (usersChoice) // Fix me so I compile
             {
-                {
+                
               case "a":
                     Assert.IsTrue(true);
                     break;
@@ -341,7 +345,7 @@ namespace FlowControlHomework
                     default:
                     Assert.IsTrue(false);
                     break;
-                }
+                
             }
         }
 
@@ -350,12 +354,16 @@ namespace FlowControlHomework
         public void Loops()
         {
 
-            int max = 17; // set me correctly so i reach the assert pass.
+            int max = 15; // set me correctly so i reach the assert pass.
+            //                    17
             for (int i = 0; i <= max; i++)
             {
                 Console.WriteLine(true);
                 // DONT BE ALARMED, you dont need brackets if its only a single statement you want to execute. Im just exposing you to this because programmers do it.
                 // But don't do it yourself. It's not a good practice, especially for a beginner.
+                //  0
+
+
                 if (i == 15) Assert.IsTrue(true);
             }
 
@@ -365,21 +373,22 @@ namespace FlowControlHomework
             // Dont change anything in the block, only the for statement.
             // hint: you dont need increment by 1.
             // This one is tough, take your time.
-            for (int i = 0; i <= max2; i++)
+            //                    14
+            for (int i = 0; i <= max2 + 2; i +=2)
             {
                 bool isOdd = !((i % 2) == 0); // notice how the variable name explains the expression? 
                 if (isOdd)
                 {
                     // if you reach here test will fail. 
                     Console.WriteLine(true);
-                    Assert.IsTrue(true);
+                    Assert.IsTrue(false);
                 }
 
                 if (i == 16) Assert.IsTrue(true);
             }
 
             // break out of the loop after the test passes at least once, there are a couple ways do to this
-            int counter = 0;  // Change me to get in.
+            int counter = 2;  // Change me to get in.
             while (counter > 1 && counter < 15)
             {
                 Console.WriteLine(true);
@@ -389,6 +398,7 @@ namespace FlowControlHomework
                 {
                     break;
                 }
+                counter++;
             }
 
             // Fix this loop so the assert true line passes at least once AND the test doesn't go on forever.
@@ -400,7 +410,7 @@ namespace FlowControlHomework
                     Console.WriteLine(true);
                     Assert.IsTrue(true);
                 }
-                
+                count++;
             } while ( count < 10);
             
         }
